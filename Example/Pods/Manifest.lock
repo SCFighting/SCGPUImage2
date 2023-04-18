@@ -1,0 +1,16 @@
+PODS:
+  - SCGPUImage2 (0.1.0)
+
+DEPENDENCIES:
+  - SCGPUImage2 (from `../`)
+
+EXTERNAL SOURCES:
+  SCGPUImage2:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SCGPUImage2: d4ddf0a9c6ed93209225480c2d864de1cc968c01
+
+PODFILE CHECKSUM: 6dcbadc125ed4af3cf9f0d8cab00e3b7d5fdfe7c
+
+COCOAPODS: 1.12.0
