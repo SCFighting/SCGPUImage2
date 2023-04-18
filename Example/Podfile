@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'SCGPUImage2_Example' do
+  pod 'SCGPUImage2', :path => '../'
+
+  target 'SCGPUImage2_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
