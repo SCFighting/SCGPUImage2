@@ -10,7 +10,7 @@ public class MovieInput: ImageSource {
     let playAtActualSpeed:Bool
     let loop:Bool
     var videoEncodingIsFinished = false
-    var previousFrameTime = kCMTimeZero
+    var previousFrameTime = CMTime.zero
     var previousActualFrameTime = CFAbsoluteTimeGetCurrent()
 
     var numberOfFramesCaptured = 0
@@ -44,7 +44,7 @@ public class MovieInput: ImageSource {
 
     public func start() {
         asset.loadValuesAsynchronously(forKeys:["tracks"], completionHandler:{
-            standardProcessingQueue.async(execute: DispatchWorkItem(block: {
+            standardProcessingQueue.async(execute: {
                 guard (self.asset.statusOfValue(forKey: "tracks", error:nil) == .loaded) else { return }
 
                 guard self.assetReader.startReading() else {
@@ -53,8 +53,9 @@ public class MovieInput: ImageSource {
                 }
                 
                 var readerVideoTrackOutput:AVAssetReaderOutput? = nil;
+                
                 for output in self.assetReader.outputs {
-                    if(output.mediaType == AVMediaType.video.rawValue) {
+                    if(output.mediaType == .video) {
                         readerVideoTrackOutput = output;
                     }
                 }
@@ -72,7 +73,7 @@ public class MovieInput: ImageSource {
                         self.endProcessing()
                     }
                 }
-            }))
+            })
         })
     }
     

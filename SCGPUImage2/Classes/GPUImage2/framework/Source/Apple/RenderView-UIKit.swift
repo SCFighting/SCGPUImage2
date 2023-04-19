@@ -108,7 +108,7 @@ public class RenderView:UIView, ImageConsumer {
     
     func activateDisplayFramebuffer() {
         glBindFramebuffer(GLenum(GL_FRAMEBUFFER), displayFramebuffer!)
-        print("backingSize=\(backingSize),orientation=\(orientation)\n")
+//        print("backingSize=\(backingSize),orientation=\(orientation)\n")
         
         glViewport(0, 0, backingSize.width, backingSize.height)
     }

@@ -1,22 +1,28 @@
 {
   "name": "SCGPUImage2",
   "version": "0.1.0",
-  "summary": "A short description of SCGPUImage2.",
+  "summary": "1.修改camera支持切换摄像头,2修改renderview支持横竖屏切换",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/孙超/SCGPUImage2",
+  "homepage": "https://github.com/SCFighting/SCGPUImage2",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "孙超": "sunweichao@rayclear.com"
+    "孙超": "hyswcvip@163.com"
   },
   "source": {
-    "git": "https://github.com/孙超/SCGPUImage2.git",
+    "git": "git@github.com:SCFighting/SCGPUImage2.git",
     "tag": "0.1.0"
   },
   "platforms": {
     "ios": "10.0"
   },
-  "source_files": "SCGPUImage2/Classes/**/*"
+  "source_files": "SCGPUImage2/Classes/**/*",
+  "frameworks": [
+    "OpenGLES",
+    "CoreMedia",
+    "QuartzCore",
+    "AVFoundation"
+  ]
 }
