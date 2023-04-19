@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SCGPUImage2'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = '1.修改camera支持切换摄像头,2修改renderview支持横竖屏切换'
 
 # This description is used to generate tags and improve search results.
